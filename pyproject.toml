@@ -1,14 +1,14 @@
 [tool.poetry]
-name = "manim-voiceover"
-version = "0.3.7"
-description = "Manim plugin for all things voiceover"
-authors = ["The Manim Community Developers <contact@manim.community>"]
+name = "manim-voiceover-fixed"
+version = "0.3.9"
+description = "Manim plugin for all things voiceover (fork with updated ElevenLabs API)"
+authors = ["Joel Mun <messagejoel@outlook.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{ include = "manim_voiceover" }]
-repository = "https://github.com/ManimCommunity/manim-voiceover"
-homepage = "https://voiceover.manim.community"
-documentation = "https://voiceover.manim.community"
+packages = [{ include = "manim_voiceover_fixed" }]
+repository = "https://github.com/9oelM/manim-voiceover"
+homepage = "https://github.com/9oelM/manim-voiceover"
+documentation = "https://github.com/9oelM/manim-voiceover"
 keywords = [
     "text-to-speech",
     "tts",
@@ -29,19 +29,17 @@ classifiers = [
     "Topic :: Multimedia :: Sound/Audio :: Speech",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
     "Topic :: Scientific/Engineering :: Visualization",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Natural Language :: English",
 ]
 
 [tool.poetry.scripts]
-manim_translate = 'manim_voiceover.translate.translate:main'
-manim_render_translation = 'manim_voiceover.translate.render:main'
+manim_translate = 'manim_voiceover_fixed.translate.translate:main'
+manim_render_translation = 'manim_voiceover_fixed.translate.render:main'
 
 [tool.poetry.dependencies]
-python = "==3.11.6"
+python = ">=3.11.6,<4.0"
 manim = "==0.19.0"
 sox = "^1.4.1"
 python-dotenv = "^0.21.0"
@@ -115,7 +113,7 @@ sphinx-sitemap = "^2.2.1"
 
 
 [tool.poetry.plugins."manim.plugins"]
-"manim_voiceover" = "manim_voiceover"
+"manim_voiceover_fixed" = "manim_voiceover_fixed"
 
 [build-system]
 requires = ["poetry-core"]

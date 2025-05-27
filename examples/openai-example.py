@@ -1,6 +1,6 @@
 from manim import *
-from manim_voiceover import VoiceoverScene
-from manim_voiceover.services.openai import OpenAIService
+from manim_voiceover_fixed import VoiceoverScene
+from manim_voiceover_fixed.services.openai import OpenAIService
 
 
 class OpenAIExample(VoiceoverScene):

@@ -1,6 +1,6 @@
 from manim import *
-from manim_voiceover import VoiceoverScene
-from manim_voiceover.services.coqui import CoquiService
+from manim_voiceover_fixed import VoiceoverScene
+from manim_voiceover_fixed.services.coqui import CoquiService
 
 
 class CoquiExample(VoiceoverScene):

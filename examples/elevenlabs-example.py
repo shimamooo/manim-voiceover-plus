@@ -1,7 +1,7 @@
 from manim import *
 
-from manim_voiceover import VoiceoverScene
-from manim_voiceover.services.elevenlabs import ElevenLabsService
+from manim_voiceover_fixed import VoiceoverScene
+from manim_voiceover_fixed.services.elevenlabs import ElevenLabsService
 from elevenlabs import VoiceSettings
 
 

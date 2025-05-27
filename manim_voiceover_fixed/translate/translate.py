@@ -5,8 +5,8 @@ from time import sleep
 from pathlib import Path
 import dotenv
 
-from manim_voiceover.defaults import DEEPL_AVAILABLE_TARGET_LANG
-from manim_voiceover.translate.gettext_utils import POFile, init_gettext, init_language
+from manim_voiceover_fixed.defaults import DEEPL_AVAILABLE_TARGET_LANG
+from manim_voiceover_fixed.translate.gettext_utils import POFile, init_gettext, init_language
 
 
 # Get the current working directory as Path

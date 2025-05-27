@@ -1,8 +1,8 @@
 from manim import *
-from manim_voiceover import VoiceoverScene
+from manim_voiceover_fixed import VoiceoverScene
 
 # from manim_voiceover.services.coqui import CoquiService
-from manim_voiceover.services.azure import AzureService
+from manim_voiceover_fixed.services.azure import AzureService
 
 
 class BookmarkExample(VoiceoverScene):

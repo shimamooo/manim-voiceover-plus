@@ -6,7 +6,7 @@ import subprocess
 
 from manim import logger
 
-from manim_voiceover.helper import prompt_ask_missing_extras
+from manim_voiceover_fixed.helper import prompt_ask_missing_extras
 
 try:
     import deepl

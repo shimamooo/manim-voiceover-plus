@@ -9,7 +9,7 @@ from typing import Tuple, Iterable
 from pydub.silence import detect_nonsilent
 import hashlib
 
-from manim_voiceover.services.base import SpeechService
+from manim_voiceover_fixed.services.base import SpeechService
 
 
 # Had to modify `split_on_silence` from pydub to allow for

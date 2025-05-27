@@ -10,7 +10,7 @@ import os
 import sys
 from pathlib import Path
 
-import manim_voiceover
+import manim_voiceover_fixed
 
 # -- Path setup --------------------------------------------------------------
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -130,7 +130,7 @@ html_theme_options = {
         "color-foreground-secondary": "#ffffffd9",
     },
 }
-html_title = f"Manim Voiceover v{manim_voiceover.__version__}"
+html_title = f"Manim Voiceover v{manim_voiceover_fixed.__version__}"
 
 # This specifies any additional css files that will override the theme's
 html_css_files = ["custom.css"]

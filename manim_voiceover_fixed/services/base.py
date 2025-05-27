@@ -7,17 +7,17 @@ import hashlib
 from pathlib import Path
 from manim import config, logger
 from slugify import slugify
-from manim_voiceover.defaults import (
+from manim_voiceover_fixed.defaults import (
     DEFAULT_VOICEOVER_CACHE_DIR,
     DEFAULT_VOICEOVER_CACHE_JSON_FILENAME,
 )
-from manim_voiceover.helper import (
+from manim_voiceover_fixed.helper import (
     append_to_json_file,
     prompt_ask_missing_extras,
     remove_bookmarks,
 )
-from manim_voiceover.modify_audio import adjust_speed
-from manim_voiceover.tracker import AUDIO_OFFSET_RESOLUTION
+from manim_voiceover_fixed.modify_audio import adjust_speed
+from manim_voiceover_fixed.tracker import AUDIO_OFFSET_RESOLUTION
 
 
 def timestamps_to_word_boundaries(segments):

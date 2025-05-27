@@ -1,8 +1,8 @@
 from manim import *
 import pygments.styles as code_styles
-from manim_voiceover import VoiceoverScene
+from manim_voiceover_fixed import VoiceoverScene
 
-from manim_voiceover.services.azure import AzureService
+from manim_voiceover_fixed.services.azure import AzureService
 
 code_style = code_styles.get_style_by_name("one-dark")
 

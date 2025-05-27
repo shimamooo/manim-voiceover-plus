@@ -1,4 +1,4 @@
-# Manim Voiceover (fixed for elevenlabs@2.1.0)
+# manim-voiceover-fixed (fixed for elevenlabs@2.1.0)
 
 This is a fork from https://github.com/ManimCommunity/manim-voiceover/.
 
