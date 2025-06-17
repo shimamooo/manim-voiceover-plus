@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "manim-voiceover-fixed"
-version = "0.3.9"
+version = "0.3.10"
 description = "Manim plugin for all things voiceover (fork with updated ElevenLabs API)"
 authors = ["Joel Mun <messagejoel@outlook.com>"]
 license = "MIT"
