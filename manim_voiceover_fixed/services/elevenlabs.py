@@ -1,7 +1,7 @@
 import os
 import sys
 from pathlib import Path
-from typing import List, Optional, Union
+from typing import Dict, List, Optional
 
 from dotenv import find_dotenv, load_dotenv
 from manim import logger
@@ -103,6 +103,9 @@ class ElevenLabsService(SpeechService):
         api_key = os.getenv("ELEVEN_API_KEY")
         self.client = ElevenLabs(api_key=api_key)
         
+        # Initialize consecutive text tracking dictionary
+        self.consecutive_text_by_id: Dict[str, str] = {}
+        
         if not voice_name and not voice_id:
             logger.warn(
                 "None of `voice_name` or `voice_id` provided. "
@@ -179,6 +182,25 @@ class ElevenLabsService(SpeechService):
             cache_dir = self.cache_dir  # type: ignore
 
         input_text = remove_bookmarks(text)
+        
+        # Extract text_id from kwargs for consecutive text tracking
+        text_id = kwargs.get('text_id')
+        if text_id is not None:
+            assert isinstance(text_id, str), f"text_id must be a string, got {type(text_id)}"
+        
+        # Handle consecutive text tracking
+        if text_id is not None:
+            if text_id in self.consecutive_text_by_id:
+                # Use existing consecutive text as previous_text if not explicitly provided
+                if previous_text is None:
+                    previous_text = self.consecutive_text_by_id[text_id]
+                # Append current text to consecutive text and normalize to end with single space
+                self.consecutive_text_by_id[text_id] = (self.consecutive_text_by_id[text_id].rstrip() + " " + input_text).rstrip() + " "
+            else:
+                # Start new consecutive text for this ID, normalized to end with single space
+                self.consecutive_text_by_id[text_id] = input_text.rstrip() + " "
+                # No previous_text for new ID (unless explicitly provided)
+        
         # Determine final parameters (per-request overrides or instance defaults)
         final_voice_settings = voice_settings or self.voice_settings
         final_enable_logging = enable_logging if enable_logging is not None else self.enable_logging
