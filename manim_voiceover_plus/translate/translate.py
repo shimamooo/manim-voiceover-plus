@@ -71,7 +71,6 @@ def main():
     args = parser.parse_args()
 
     # Initialize gettext
-    print(args.files, args.domain, args.localedir)
     init_gettext(args.files, args.domain, args.localedir)
 
     if args.target == "all":
