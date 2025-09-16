@@ -89,8 +89,12 @@ def main():
         # Initialize language directory
         po_path = init_language(lang, args.domain, args.localedir)
 
+        print(po_path)
+
         if not args.only_initialize:
             po_file = POFile(po_path, source_lang=args.source)
+            print(args.source)
+            print(po_file)
             # Translate po file
             wait = po_file.translate(lang, api_key=DEEPL_API_KEY)
             if wait:

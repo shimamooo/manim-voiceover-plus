@@ -37,11 +37,8 @@ def init_gettext(files, domain, localedir):
 
 def init_language(target_lang, domain, localedir):
     """Initialize a language for a domain"""
-    print(target_lang, domain, localedir)
     # Init language directory
     lang_dir = localedir / target_lang / "LC_MESSAGES"
-    print(lang_dir)
-    print(os.path.exists(lang_dir))
 
     # If language directory does not exist, create it
     if not os.path.exists(lang_dir):
@@ -49,8 +46,6 @@ def init_language(target_lang, domain, localedir):
 
     # Init po file
     po_path = lang_dir / f"{domain}.po"
-    print(po_path)
-    print(os.path.exists(po_path))
 
     # Check if po_path exists
     if os.path.exists(po_path):
