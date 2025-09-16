@@ -114,7 +114,9 @@ def main():
 
         print(f"Rendering {scene} in {locale}...")
         # Set LOCALE environment variable to locale
-        os.environ["LOCALE"] = locale
+        env = os.environ.copy()
+        env["LOCALE"] = locale
+        env["DOMAIN"] = domain
         ofile = scene + "_" + locale + ".mp4"
         cmd = [
             "manim",
@@ -128,7 +130,7 @@ def main():
 
         # Run manim with the command
         try:
-            result = subprocess.run(cmd, env={"LOCALE": locale, "DOMAIN": domain}).returncode
+            result = subprocess.run(cmd, env=env).returncode
         except KeyboardInterrupt:
             print("KeyboardInterrupt")
             sys.exit(0)
