@@ -186,7 +186,7 @@ class SpeechService(ABC):
     def get_cached_result(self, input_data, cache_dir):
         json_path = os.path.join(cache_dir / DEFAULT_VOICEOVER_CACHE_JSON_FILENAME)
         if os.path.exists(json_path):
-            json_data = json.load(open(json_path, "r", encoding="utf-8"))
+            json_data = json.load(open(json_path, "r"))
             for entry in json_data:
                 if entry["input_data"] == input_data:
                     return entry

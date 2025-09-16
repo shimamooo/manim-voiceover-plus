@@ -107,7 +107,7 @@ def append_to_json_file(json_file: str, data: dict):
             json.dump([data], f, indent=2)
         return
 
-    with open(json_file, "r", encoding="utf-8") as f:
+    with open(json_file, "r") as f:
         json_data = json.load(f)
 
     if not isinstance(json_data, list):
