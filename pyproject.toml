@@ -6,9 +6,9 @@ authors = ["Anthony Kuang <anthonykuang@berkeley.edu>"]
 license = "MIT"
 readme = "README.md"
 packages = [{ include = "manim_voiceover_plus" }]
-repository = "https://github.com/shimamooo/manim-voiceover_plus"
-homepage = "https://github.com/shimamooo/manim-voiceover_plus"
-documentation = "https://github.com/shimamooo/manim-voiceover_plus"
+repository = "https://github.com/shimamooo/manim-voiceover-plus"
+homepage = "https://github.com/shimamooo/manim-voiceover-plus"
+documentation = "https://github.com/shimamooo/manim-voiceover-plus"
 keywords = [
     "text-to-speech",
     "tts",
