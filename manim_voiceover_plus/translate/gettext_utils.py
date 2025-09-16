@@ -117,8 +117,8 @@ class POFile:
 
         self.entries: t.List[POEntry] = []
 
-        with open(path, "r") as f:
-            content = f.read()
+        with open(path, "r", encoding="utf-8") as f:
+            content = f.read(encoding="utf-8")
 
         # Regex to split the PO file. Match only the last double quote before each msgid.
         # Arbitrary characters can be between the double quote and the msgid
@@ -207,6 +207,6 @@ class POFile:
     def save(self, path):
         content = "".join([i.to_string() for i in self.entries])
 
-        with open(path, "w") as f:
-            f.write(content)
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(content, encoding="utf-8")
             f.flush()
