@@ -1,8 +1,8 @@
 import os
 from manim import *
-from manim_voiceover_fixed import VoiceoverScene
-from manim_voiceover_fixed.services.gtts import GTTSService
-from manim_voiceover_fixed.translate import get_gettext
+from manim_voiceover_plus import VoiceoverScene
+from manim_voiceover_plus.services.gtts import GTTSService
+from manim_voiceover_plus.translate import get_gettext
 
 # It is good practice to get the LOCALE and DOMAIN from environment variables
 LOCALE = os.getenv("LOCALE")

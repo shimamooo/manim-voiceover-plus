@@ -6,13 +6,13 @@ import subprocess
 
 from manim import logger
 
-from manim_voiceover_fixed.helper import prompt_ask_missing_extras
+from manim_voiceover_plus.helper import prompt_ask_missing_extras
 
 try:
     import deepl
 except ImportError:
     logger.error(
-        'Missing packages. Run `pip install "manim-voiceover[translate]"` to be able to translate voiceovers.'
+        'Missing packages. Run `pip install "manim-voiceover-plus[translate]"` to be able to translate voiceovers.'
     )
 
 

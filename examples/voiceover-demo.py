@@ -1,8 +1,8 @@
 from manim import *
 import pygments.styles as code_styles
-from manim_voiceover_fixed import VoiceoverScene
+from manim_voiceover_plus import VoiceoverScene
 
-from manim_voiceover_fixed.services.azure import AzureService
+from manim_voiceover_plus.services.azure import AzureService
 
 code_style = code_styles.get_style_by_name("one-dark")
 
@@ -264,7 +264,7 @@ self.play(Write(demo_code), run_time=tracker.duration)''',
             self.play(FadeIn(demo_code3))
 
         with self.voiceover(
-            text="""Manim-voiceover then splits your audio automatically and replaces the AI generated voice with your real recording."""
+            text="""Manim-voiceover-plus then splits your audio automatically and replaces the AI generated voice with your real recording."""
         ):
             self.play(FadeOut(demo_code3.code), FadeIn(demo_code4.code))
             self.play(FadeOut(demo_code4.code), FadeIn(demo_code5.code))
@@ -272,7 +272,7 @@ self.play(Write(demo_code), run_time=tracker.duration)''',
         self.wait(2)
 
         with self.voiceover(
-            text="""Manim-voiceover makes it much easier to do voiceovers for Manim projects."""
+            text="""Manim-voiceover-plus makes it much easier to do voiceovers for Manim projects."""
         ):
             self.play(FadeOut(demo_code5.code, demo_code3.background_mobject))
 

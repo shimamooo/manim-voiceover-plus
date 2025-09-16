@@ -1,6 +1,6 @@
 from manim import *
-from manim_voiceover_fixed import VoiceoverScene
-from manim_voiceover_fixed.services.pyttsx3 import PyTTSX3Service
+from manim_voiceover_plus import VoiceoverScene
+from manim_voiceover_plus.services.pyttsx3 import PyTTSX3Service
 
 
 class GTTSExample(VoiceoverScene):

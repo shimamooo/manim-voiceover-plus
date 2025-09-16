@@ -1,8 +1,8 @@
 from pathlib import Path
 
 from manim import logger
-from manim_voiceover_fixed.helper import prompt_ask_missing_package, remove_bookmarks, wav2mp3
-from manim_voiceover_fixed.services.base import SpeechService
+from manim_voiceover_plus.helper import prompt_ask_missing_package, remove_bookmarks, wav2mp3
+from manim_voiceover_plus.services.base import SpeechService
 
 try:
     from TTS.api import TTS

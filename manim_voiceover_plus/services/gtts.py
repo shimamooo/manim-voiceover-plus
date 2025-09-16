@@ -1,15 +1,15 @@
 from pathlib import Path
 from manim import logger
-from manim_voiceover_fixed.helper import prompt_ask_missing_extras, remove_bookmarks
+from manim_voiceover_plus.helper import prompt_ask_missing_extras, remove_bookmarks
 
 try:
     from gtts import gTTS, gTTSError
 except ImportError:
     logger.error(
-        'Missing packages. Run `pip install "manim-voiceover[gtts]"` to use GTTSService.'
+        'Missing packages. Run `pip install "manim-voiceover-plus[gtts]"` to use GTTSService.'
     )
 
-from manim_voiceover_fixed.services.base import SpeechService
+from manim_voiceover_plus.services.base import SpeechService
 
 
 class GTTSService(SpeechService):

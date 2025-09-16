@@ -1,14 +1,14 @@
 [tool.poetry]
-name = "manim-voiceover-fixed"
+name = "manim-voiceover-plus"
 version = "0.3.10"
 description = "Manim plugin for all things voiceover (fork with updated ElevenLabs API)"
-authors = ["Joel Mun <messagejoel@outlook.com>"]
+authors = ["Anthony Kuang <anthonykuang@berkeley.edu>"]
 license = "MIT"
 readme = "README.md"
-packages = [{ include = "manim_voiceover_fixed" }]
-repository = "https://github.com/9oelM/manim-voiceover"
-homepage = "https://github.com/9oelM/manim-voiceover"
-documentation = "https://github.com/9oelM/manim-voiceover"
+packages = [{ include = "manim_voiceover_plus" }]
+repository = "https://github.com/shimamooo/manim-voiceover_plus"
+homepage = "https://github.com/shimamooo/manim-voiceover_plus"
+documentation = "https://github.com/shimamooo/manim-voiceover_plus"
 keywords = [
     "text-to-speech",
     "tts",
@@ -35,8 +35,8 @@ classifiers = [
 ]
 
 [tool.poetry.scripts]
-manim_translate = 'manim_voiceover_fixed.translate.translate:main'
-manim_render_translation = 'manim_voiceover_fixed.translate.render:main'
+manim_translate = 'manim_voiceover_plus.translate.translate:main'
+manim_render_translation = 'manim_voiceover_plus.translate.render:main'
 
 [tool.poetry.dependencies]
 python = ">=3.11.6,<4.0"
@@ -113,7 +113,7 @@ sphinx-sitemap = "^2.2.1"
 
 
 [tool.poetry.plugins."manim.plugins"]
-"manim_voiceover_fixed" = "manim_voiceover_fixed"
+"manim_voiceover_plus" = "manim_voiceover_plus"
 
 [build-system]
 requires = ["poetry-core"]

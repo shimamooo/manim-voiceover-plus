@@ -7,7 +7,7 @@ from pathlib import Path
 from pydub import AudioSegment
 from manim import logger
 
-from manim_voiceover_fixed.helper import trim_silence, wav2mp3
+from manim_voiceover_plus.helper import trim_silence, wav2mp3
 
 from pynput import keyboard
 import pyaudio

@@ -6,9 +6,9 @@ import re
 import typing as t
 
 from manim import Scene, config
-from manim_voiceover_fixed.services.base import SpeechService
-from manim_voiceover_fixed.tracker import VoiceoverTracker
-from manim_voiceover_fixed.helper import chunks, remove_bookmarks
+from manim_voiceover_plus.services.base import SpeechService
+from manim_voiceover_plus.tracker import VoiceoverTracker
+from manim_voiceover_plus.helper import chunks, remove_bookmarks
 
 
 # SCRIPT_FILE_PATH = "media/script.txt"

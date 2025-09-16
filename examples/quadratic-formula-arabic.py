@@ -10,8 +10,8 @@ from PIL import Image
 
 # from manim_presentation import Slide
 # from LogoMathVerse import logogif
-from manim_voiceover_fixed import VoiceoverScene
-from manim_voiceover_fixed.services.azure import AzureService
+from manim_voiceover_plus import VoiceoverScene
+from manim_voiceover_plus.services.azure import AzureService
 
 
 RESOLUTION = ""

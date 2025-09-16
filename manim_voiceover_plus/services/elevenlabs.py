@@ -6,15 +6,15 @@ from typing import Dict, List, Optional
 from dotenv import find_dotenv, load_dotenv
 from manim import logger
 
-from manim_voiceover_fixed.helper import create_dotenv_file, remove_bookmarks
-from manim_voiceover_fixed.services.base import SpeechService
+from manim_voiceover_plus.helper import create_dotenv_file, remove_bookmarks
+from manim_voiceover_plus.services.base import SpeechService
 
 try:
     from elevenlabs.client import ElevenLabs
     from elevenlabs import VoiceSettings, save
 except ImportError:
     logger.error(
-        'Missing packages. Run `pip install "manim-voiceover[elevenlabs]"` '
+        'Missing packages. Run `pip install "manim-voiceover-plus[elevenlabs]"` '
         "to use ElevenLabs API."
     )
 

@@ -1,18 +1,18 @@
 from pathlib import Path
-from manim_voiceover_fixed.helper import msg_box, prompt_ask_missing_extras, remove_bookmarks
+from manim_voiceover_plus.helper import msg_box, prompt_ask_missing_extras, remove_bookmarks
 
-from manim_voiceover_fixed.services.base import SpeechService
+from manim_voiceover_plus.services.base import SpeechService
 from manim import logger
 
 try:
     import pyaudio
-    from manim_voiceover_fixed.services.recorder.utility import Recorder
+    from manim_voiceover_plus.services.recorder.utility import Recorder
 
     # Workaround to get this included in the docs
     DEFAULT_FORMAT = pyaudio.paInt16
 except ImportError:
     logger.error(
-        'Missing packages. Run `pip install "manim-voiceover[recorder]"` to use RecorderService.'
+        'Missing packages. Run `pip install "manim-voiceover-plus[recorder]"` to use RecorderService.'
     )
     DEFAULT_FORMAT = None
 

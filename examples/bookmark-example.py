@@ -1,8 +1,8 @@
 from manim import *
-from manim_voiceover_fixed import VoiceoverScene
+from manim_voiceover_plus import VoiceoverScene
 
 # from manim_voiceover.services.coqui import CoquiService
-from manim_voiceover_fixed.services.azure import AzureService
+from manim_voiceover_plus.services.azure import AzureService
 
 
 class BookmarkExample(VoiceoverScene):
@@ -20,7 +20,7 @@ class BookmarkExample(VoiceoverScene):
         )
 
         with self.voiceover(
-            text="""Manim-Voiceover allows you to <bookmark mark='A'/>trigger
+            text="""Manim-Voiceover-plus allows you to <bookmark mark='A'/>trigger
             animations <bookmark mark='B'/>at any word in the middle of a sentence by
             adding simple <bookmark mark='C'/>bookmarks to your text."""
         ) as tracker:

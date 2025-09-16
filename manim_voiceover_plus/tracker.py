@@ -7,8 +7,8 @@ from typing import Optional, List
 from scipy.interpolate import interp1d
 
 from manim import Scene
-from manim_voiceover_fixed.modify_audio import get_duration
-from manim_voiceover_fixed.helper import remove_bookmarks
+from manim_voiceover_plus.modify_audio import get_duration
+from manim_voiceover_plus.helper import remove_bookmarks
 
 AUDIO_OFFSET_RESOLUTION = 10_000_000
 

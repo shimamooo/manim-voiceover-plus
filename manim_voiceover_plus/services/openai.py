@@ -5,19 +5,19 @@ from pathlib import Path
 from dotenv import find_dotenv, load_dotenv
 from manim import logger
 
-from manim_voiceover_fixed.helper import (
+from manim_voiceover_plus.helper import (
     create_dotenv_file,
     prompt_ask_missing_extras,
     remove_bookmarks,
 )
-from manim_voiceover_fixed.services.base import SpeechService
+from manim_voiceover_plus.services.base import SpeechService
 
 try:
     import openai
 except ImportError:
     logger.error(
         "Missing packages. "
-        'Run `pip install "manim-voiceover[openai]"` to use OpenAIService.'
+        'Run `pip install "manim-voiceover-plus[openai]"` to use OpenAIService.'
     )
 
 

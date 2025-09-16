@@ -7,17 +7,17 @@ import hashlib
 from pathlib import Path
 from manim import config, logger
 from slugify import slugify
-from manim_voiceover_fixed.defaults import (
+from manim_voiceover_plus.defaults import (
     DEFAULT_VOICEOVER_CACHE_DIR,
     DEFAULT_VOICEOVER_CACHE_JSON_FILENAME,
 )
-from manim_voiceover_fixed.helper import (
+from manim_voiceover_plus.helper import (
     append_to_json_file,
     prompt_ask_missing_extras,
     remove_bookmarks,
 )
-from manim_voiceover_fixed.modify_audio import adjust_speed
-from manim_voiceover_fixed.tracker import AUDIO_OFFSET_RESOLUTION
+from manim_voiceover_plus.modify_audio import adjust_speed
+from manim_voiceover_plus.tracker import AUDIO_OFFSET_RESOLUTION
 
 
 def timestamps_to_word_boundaries(segments):
@@ -143,7 +143,7 @@ class SpeechService(ABC):
                     import stable_whisper as whisper
                 except ImportError:
                     logger.error(
-                        'Missing packages. Run `pip install "manim-voiceover[transcribe]"` to be able to transcribe voiceovers.'
+                        'Missing packages. Run `pip install "manim-voiceover-plus[transcribe]"` to be able to transcribe voiceovers.'
                     )
 
                 prompt_ask_missing_extras(

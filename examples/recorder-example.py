@@ -1,6 +1,6 @@
 from manim import *
-from manim_voiceover_fixed import VoiceoverScene
-from manim_voiceover_fixed.services.recorder import RecorderService
+from manim_voiceover_plus import VoiceoverScene
+from manim_voiceover_plus.services.recorder import RecorderService
 
 
 class RecorderExample(VoiceoverScene):

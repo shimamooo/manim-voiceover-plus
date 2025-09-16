@@ -169,11 +169,11 @@ def prompt_ask_missing_extras(
     answer = input()
     if answer.lower() == "n":
         raise ImportError(
-            f'{extras} extras are not installed. Install them by running `pip install "manim-voiceover[{extras}]"`'
+            f'{extras} extras are not installed. Install them by running `pip install "manim-voiceover-plus[{extras}]"`'
         )
     else:
         logger.info(f"Installing {extras}...")
-        pip.main(["install", f"manim-voiceover[{extras}]"])
+        pip.main(["install", f"manim-voiceover-plus[{extras}]"])
         logger.info("Installed missing extras. Please run Manim again.")
         sys.exit(0)
 

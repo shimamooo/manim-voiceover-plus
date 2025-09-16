@@ -5,8 +5,8 @@
 
 from manim import *
 from numpy import sqrt, sin, cos
-from manim_voiceover_fixed import VoiceoverScene
-from manim_voiceover_fixed.services.azure import AzureService
+from manim_voiceover_plus import VoiceoverScene
+from manim_voiceover_plus.services.azure import AzureService
 
 
 # abbreviations

@@ -1,6 +1,6 @@
 from manim import *
-from manim_voiceover_fixed import VoiceoverScene
-from manim_voiceover_fixed.services.gtts import GTTSService
+from manim_voiceover_plus import VoiceoverScene
+from manim_voiceover_plus.services.gtts import GTTSService
 
 
 class GTTSExample(VoiceoverScene):
