@@ -113,7 +113,7 @@ class _StitcherService(SpeechService):
 
         # Check whether the audio file has already been processed
         if os.path.exists(self.get_json_path()):
-            config = json.load(open(self.get_json_path(), "r"))
+            config = json.load(open(self.get_json_path(), "r", encoding="utf-8"))
             try:
                 if self.params == config["params"]:
                     all_files_exist = True
@@ -150,7 +150,7 @@ class _StitcherService(SpeechService):
             output_dict["segments"].append({"index": i, "path": output_path})
 
         # Save output info
-        with open(self.get_json_path(), "w") as f:
+        with open(self.get_json_path(), "w", encoding="utf-8") as f:
             f.write(json.dumps(output_dict, indent=4))
 
     def get_json_path(self) -> str:
@@ -159,7 +159,7 @@ class _StitcherService(SpeechService):
     def generate_from_text(
         self, text: str, cache_dir: str = None, path: str = None
     ) -> dict:
-        config = json.load(open(self.get_json_path(), "r"))
+        config = json.load(open(self.get_json_path(), "r", encoding="utf-8"))
         audio_path = config["segments"][self.current_segment_index]["path"]
         json_path = os.path.splitext(audio_path)[0] + ".json"
 
