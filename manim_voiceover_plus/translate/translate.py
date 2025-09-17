@@ -70,23 +70,13 @@ def main():
 
     args = parser.parse_args()
 
-    print("args.files", args.files, type(args.files))
-    print("args.domain", args.domain, type(args.domain))
-    print("args.localedir", args.localedir, type(args.localedir))
-    print("args.target", args.target, type(args.target))
-    print("args.source", args.source, type(args.source))
-    print("args.only_initialize", args.only_initialize, type(args.only_initialize))
-
     # Initialize gettext
     init_gettext(args.files, args.domain, args.localedir)
-    print("init_gettext done")
 
     if args.target == "all":
         langs = [i for i in DEEPL_AVAILABLE_TARGET_LANG if "-" not in i]
     else:
         langs = args.target.split(",")
-
-    print("langs", langs)
 
     for lang in langs:
         if lang not in DEEPL_AVAILABLE_TARGET_LANG:
@@ -99,12 +89,8 @@ def main():
         # Initialize language directory
         po_path = init_language(lang, args.domain, args.localedir)
 
-        print("po_path", po_path)
-
         if not args.only_initialize:
             po_file = POFile(po_path, source_lang=args.source)
-            print("args.source", args.source)
-            print("po_file", po_file)
             # Translate po file
             wait = po_file.translate(lang, api_key=DEEPL_API_KEY)
             if wait:

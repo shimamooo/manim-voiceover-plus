@@ -23,7 +23,6 @@ def init_gettext(files, domain, localedir):
         os.makedirs(localedir)
 
     pot_path = localedir / f"{domain}.pot"
-    print("pot_path", pot_path)
 
     # Iterate over all files
     for file in files:
@@ -31,38 +30,31 @@ def init_gettext(files, domain, localedir):
         if os.path.exists(pot_path):
             # If it does, update it
             subprocess.run(["xgettext", "-j", "-o", pot_path, file])
-            print("updated pot_path", pot_path)
         else:
             # If it does not, create it
             subprocess.run(["xgettext", "-o", pot_path, file])
-            print("created pot_path", pot_path)
 
 
 def init_language(target_lang, domain, localedir):
     """Initialize a language for a domain"""
     # Init language directory
     lang_dir = localedir / target_lang / "LC_MESSAGES"
-    print("lang_dir", lang_dir)
 
     # If language directory does not exist, create it
     if not os.path.exists(lang_dir):
         os.makedirs(lang_dir)
-        print("created lang_dir", lang_dir)
 
     # Init po file
     po_path = lang_dir / f"{domain}.po"
-    print("po_path", po_path)
 
     # Check if po_path exists
     if os.path.exists(po_path):
         # If it does, update it
         # os.system(f"msgmerge -U {po_path} {localedir / f'{domain}.pot'}")
-        print("updated po_path", po_path)
         pass
     else:
         # If it does not, create it
         subprocess.run(["msginit", "--no-translator", "-i", localedir / f"{domain}.pot", "-o", po_path, "-l", target_lang])
-        print("created po_path", po_path)
 
     return po_path
 
