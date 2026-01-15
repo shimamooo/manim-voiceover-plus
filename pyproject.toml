@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "manim-voiceover-plus"
-version = "0.6.7"
+version = "0.6.9"
 description = "Manim plugin for all things voiceover (fork with updated ElevenLabs API)"
 authors = ["Anthony Kuang <anthonykuang@berkeley.edu>"]
 license = "MIT"
@@ -40,7 +40,7 @@ manim_render_translation = 'manim_voiceover_plus.translate.render:main'
 
 [tool.poetry.dependencies]
 python = ">=3.11.6,<4.0"
-manim = "==0.19.0"
+manim = "~=0.19"
 sox = "^1.4.1"
 python-dotenv = "^0.21.0"
 mutagen = "^1.46.0"
